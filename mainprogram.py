@@ -42,6 +42,20 @@ if num == 1: #broccoli code
         elif detect == 2: 
             print("Ending Program")     
     
+    if plant == 3: #Celery code
+        print("Do you want to use the leaf or the stem?\n")
+        print("[1] Leaf")
+        print("[2] Stem")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractceleryleaf()
+        if detect == 2:
+            print("Please Input Stem Directory")
+            import colorextract as ce
+            ce.ave_color_extractcelerystem()
+            
     if plant == 7: #Spinach code
         print("Do you want to use the leaf or the stem?\n")
         print("[1] Leaf")
