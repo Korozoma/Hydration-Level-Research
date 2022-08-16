@@ -1,32 +1,14 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-import matplotlib.image as mpimg
-
-from PIL import Image
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-
 import cv2
-import extcolors
+import numpy as np
 
-from colormap import rgb2hex
+src_img = cv2.imread('F:\RESEARCH CODES\kangkong.jpg')
+average_color_row = np.average(src_img, axis=0)
+average_color = np.average(average_color_row, axis=0)
+print(average_color)
 
-input_name = '<F:\RESEARCH CODES\kangkong.jpg>'
-output_width = 900                   #set the output size
-img = Image.open(input_name)
-wpercent = (output_width/float(img.size[0]))
-hsize = int((float(img.size[1])*float(wpercent)))
-img = img.resize((output_width,hsize), Image.ANTIALIAS)
+d_img = np.ones((312,312,3), dtype=np.uint8)
+d_img[:,:] = average_color
 
-#save
-resize_name = 'resize_' + input_name  #the resized image name
-img.save(resize_name)                 #output location can be specified before resize_name
-
-#read
-plt.figure(figsize=(9, 9))
-img_url = resize_name
-img = plt.imread(img_url)
-plt.imshow(img)
-plt.axis('off')
-plt.show()
+cv2.imshow('Source image',src_img)
+cv2.imshow('Average Color',d_img)
+cv2.waitKey(0)
