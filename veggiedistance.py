@@ -27,8 +27,8 @@ def color_distance(rgb1, rgb2):
     ans = (rd + gd + bd) ** 0.5
     print (f"Distance is: {ans}")
 
-rgb1 = np.array([167,202,28])
-rgb2 = np.array([149,137,70])
+rgb1 = np.array([89,123,66]) #hydrated rgb
+rgb2 = np.array([122,135,123]) #dehydrated rgb
 print("Choose Function Below")
 print("[1] Color Extract")
 print("[2] Distance Calculator")
