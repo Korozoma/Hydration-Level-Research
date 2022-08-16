@@ -49,7 +49,7 @@ def ave_color_extractcabbage():
     else:
         print("Invalid Percent")
         
-def ave_color_extractspinach():
+def ave_color_extractspinachleaf():
     src_img = cv2.imread(plantdir)
     average_color_row = np.average(src_img, axis=0)
     average_color = np.average(average_color_row, axis=0)
