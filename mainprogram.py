@@ -9,14 +9,14 @@ if num == 1:
     print("[3] Celery") #done leaf and stem
     print("[4] Kangkong") #done leaf and stem
     print("[5] Mint") #done leaf
-    print("[6] Parsley")
+    print("[6] Parsley") #done
     print("[7] Spinach") #done leaf and stem
     print("[8] Spring Onion")
-    print("[9] Monstera Plant")
+    print("[9] Monstera Plant") #done leaf
     print("[10] Rubber Tree Plant")
     plant = int(input("Plant Num: "))
     
-    if plant == 1: #broccoli code
+    if plant == 1: #Broccoli code
         print("Proceed to the Leaf??\n")
         print("[1] Yes")
         print("[2] No")
@@ -79,6 +79,19 @@ if num == 1:
             ce.ave_color_extractmint()
         elif detect == 2: 
             print("Ending Program")  
+    
+    
+    if plant == 6: #Parsley code
+        print("Proceed to the Leaf??\n")
+        print("[1] Yes")
+        print("[2] No")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractparsley()
+        elif detect == 2: 
+            print("Ending Program")  
             
     if plant == 7: #Spinach code
         print("Do you want to use the leaf or the stem?\n")
@@ -93,6 +106,18 @@ if num == 1:
             print("Please Input Stem Directory")
             import colorextract as ce
             ce.ave_color_extractspinachstem()
+            
+    if plant == 8: #Spring Onion code
+        print("Proceed to the Leaf??\n")
+        print("[1] Yes")
+        print("[2] No")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractspronion()
+        elif detect == 2: 
+            print("Ending Program") 
     
     if plant == 9: #Monstera code
         print("Proceed to the Leaf??\n")
