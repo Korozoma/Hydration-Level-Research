@@ -7,8 +7,8 @@ if num == 1:
     print("[1] Broccoli") #done leaf
     print("[2] Cabbage") #done leaf
     print("[3] Celery") #done leaf and stem
-    print("[4] Kangkong")
-    print("[5] Mint")
+    print("[4] Kangkong") #done leaf and stem
+    print("[5] Mint") #done leaf
     print("[6] Parsley")
     print("[7] Spinach") #done leaf and stem
     print("[8] Spring Onion")
@@ -93,6 +93,18 @@ if num == 1:
             print("Please Input Stem Directory")
             import colorextract as ce
             ce.ave_color_extractspinachstem()
+    
+    if plant == 9: #Monstera code
+        print("Proceed to the Leaf??\n")
+        print("[1] Yes")
+        print("[2] No")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractmonstera()
+        elif detect == 2: 
+            print("Ending Program")
      
 elif num == 2:
     print("Thank You for using the program!")
