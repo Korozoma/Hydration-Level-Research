@@ -35,6 +35,6 @@ plantdir = input("Insert Plant Directory: ")
 print(plantdir)
 ave_color_extract()
 
-rgb1 = np.array([114,24,132])
-rgb2 = np.array([96,160,65])
+rgb1 = np.array([100,154,51])
+rgb2 = np.array([118,118,34])
 color_distance(rgb1,rgb2)
