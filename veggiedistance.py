@@ -5,6 +5,8 @@ import sys
 import os
 
 def ave_color_extract():
+    plantdir = input("Insert Plant Directory: ")
+    print(plantdir)
     src_img = cv2.imread(plantdir)
     average_color_row = np.average(src_img, axis=0)
     average_color = np.average(average_color_row, axis=0)
@@ -25,10 +27,18 @@ def color_distance(rgb1, rgb2):
     ans = (rd + gd + bd) ** 0.5
     print (f"Distance is: {ans}")
 
-plantdir = input("Insert Plant Directory: ")
-print(plantdir)
-ave_color_extract()
+rgb1 = np.array([167,202,28])
+rgb2 = np.array([149,137,70])
+print("Choose Function Below")
+print("[1] Color Extract")
+print("[2] Distance Calculator")
+x = int(input("Function Num: "))
+if x == 1:
+    ave_color_extract()
+elif x == 2:
+    color_distance(rgb1, rgb2)
+else:
+    print("Invalid Operation")
 
-rgb1 = np.array([110,139,11])
-rgb2 = np.array([133,153,95])
-color_distance(rgb1,rgb2)
+
+
