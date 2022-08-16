@@ -68,6 +68,18 @@ if num == 1:
             import colorextract as ce
             ce.ave_color_extractkangkongstem()
             
+    if plant == 5: #Mint code
+        print("Proceed to the Leaf??\n")
+        print("[1] Yes")
+        print("[2] No")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractmint()
+        elif detect == 2: 
+            print("Ending Program")  
+            
     if plant == 7: #Spinach code
         print("Do you want to use the leaf or the stem?\n")
         print("[1] Leaf")
