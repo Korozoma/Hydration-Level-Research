@@ -13,7 +13,7 @@ if num == 1:
     print("[7] Spinach") #done leaf and stem
     print("[8] Spring Onion") #done leaf
     print("[9] Monstera Plant") #done leaf
-    print("[10] Rubber Tree Plant")
+    print("[10] Rubber Tree Plant") #done leaf
     plant = int(input("Plant Num: "))
     
     if plant == 1: #Broccoli code
@@ -131,5 +131,17 @@ if num == 1:
         elif detect == 2: 
             print("Ending Program")
      
+    if plant == 10: #Rubber Tree code
+        print("Proceed to the Leaf??\n")
+        print("[1] Yes")
+        print("[2] No")
+        detect = int(input("Choice: "))
+        if detect == 1:
+            print("Please Input Leaf Directory")
+            import colorextract as ce
+            ce.ave_color_extractrubbertree()
+        elif detect == 2: 
+            print("Ending Program")  
+            
 elif num == 2:
     print("Thank You for using the program!")
