@@ -401,14 +401,14 @@ def ave_color_extractspronion():
 
     (b, g, r) = ave_color
     inp1 = np.array([r,g,b]) #inserted plant rgb code
-    dehy = np.array([139,126,31]) #dehydrated plant rgb code
+    dehy = np.array([77,88,42]) #dehydrated plant rgb code
     rm = 0.5 * (inp1[0] + dehy[0])
     rd = ((2 + rm) * (inp1[0] - dehy[0])) ** 2
     gd = (4 * (inp1[1] - dehy[1])) ** 2
     bd = ((3 - rm) * (inp1[2] - dehy[2])) ** 2
     ans = (rd + gd + bd) ** 0.5
     
-    hydration_level = (ans/4974) * 100 #distance hydrate & dehydrate
+    hydration_level = (ans/599) * 100 #distance hydrate & dehydrate
     round_off = round(hydration_level, 2)
     print(round_off, "% Hydration Level")
     

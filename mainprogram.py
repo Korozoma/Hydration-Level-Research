@@ -11,7 +11,7 @@ if num == 1:
     print("[5] Mint") #done leaf
     print("[6] Parsley") #done
     print("[7] Spinach") #done leaf and stem
-    print("[8] Spring Onion")
+    print("[8] Spring Onion") #done leaf
     print("[9] Monstera Plant") #done leaf
     print("[10] Rubber Tree Plant")
     plant = int(input("Plant Num: "))
