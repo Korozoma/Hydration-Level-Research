@@ -17,12 +17,6 @@ def ave_color_extract():
     cv2.imshow('Average Color',d_img)
     cv2.waitKey(0)
     
-    (b, g, r) = (average_color)
-    (r, g, b) = (r / 255, g / 255, b / 255)
-    (h, s, v) = colorsys.rgb_to_hsv(r, g, b)
-    (h, s, v) = (int(h * 179), int(s * 255), int(v * 255))
-    print('HSV : ', h, s, v)
-    
 def color_distance(rgb1, rgb2):
     rm = 0.5 * (rgb1[0] + rgb2[0])
     rd = ((2 + rm) * (rgb1[0] - rgb2[0])) ** 2
@@ -35,6 +29,6 @@ plantdir = input("Insert Plant Directory: ")
 print(plantdir)
 ave_color_extract()
 
-rgb1 = np.array([100,154,51])
-rgb2 = np.array([118,118,34])
+rgb1 = np.array([68,105,43])
+rgb2 = np.array([134,165,133])
 color_distance(rgb1,rgb2)

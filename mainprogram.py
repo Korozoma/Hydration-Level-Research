@@ -14,12 +14,10 @@ if num == 1:
         if detect == 1:
             print("Please Input Leaf Directory")
             import colorextract as ce
-            ce.ave_color_extract()
+            ce.ave_color_extracttest()
         elif detect == 2: 
             print("Please Input Stem Directory")
             import colorextract as ce
             ce.ave_color_extract()            
 elif num == 2:
     print("Thank You for using the program!")
-else:
-    print("Invalid Number")
