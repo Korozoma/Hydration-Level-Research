@@ -35,20 +35,17 @@ def ave_color_extracttest():
     round_off = round(hydration_level, 2)
     print(round_off, "% Hydration Level")
     
-    range_1 = range(0, 20)
-    range_2 = range(21, 40)
-    range_3 = range(41, 70)
-    range_4 = range(71, 89)
-    range_5 = range(90, 100)
+    range_1 = range(0, 25)
+    range_2 = range(26, 50)
+    range_3 = range(51, 75)
+    range_4 = range(76, 100)
     if int(hydration_level) in range_1:
-        print("Your Plant is Very Dehydrated")
+        print("Your Plant is Dehydrated")
     elif int(hydration_level) in range_2:
         print("Your Plant is Slightly Dehydrated")
     elif int(hydration_level) in range_3:
         print("Your Plant is Slightly Hydrated")
     elif int(hydration_level) in range_4:
-        print("Your Plant is Almost Hydrated")
-    elif int(hydration_level) in range_5:
         print("Your Plant is Well-Hydrated")
     else:
         print("Invalid Percent")
@@ -75,7 +72,6 @@ def ave_color_extract():
     gd = (4 * (hyd[1] - inp[1])) ** 2
     bd = ((3 - rm) * (hyd[2] - inp[2])) ** 2
     ans = (rd + gd + bd) ** 0.5
-    print (f"Distance is: {ans}")
     
     hydration_level = (2687/ans) * 100
     print(hydration_level, "%")
