@@ -33,7 +33,7 @@ def ave_color_extracttest():
     
     hydration_level = (ans/11138) * 100
     round_off = round(hydration_level, 2)
-    print(hydration_level, "% Hydration Level")
+    print(round_off, "% Hydration Level")
     
     range_1 = range(0, 20)
     range_2 = range(21, 40)
